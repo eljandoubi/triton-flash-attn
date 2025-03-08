@@ -1,14 +1,29 @@
 <p align="center">
     <a href="logo">
-        <img src="pics/flash_attn.png" width="50%"/>
+        <img src="pics/flash_attn.png" width="75%"/>
     </a>
 </p>
 
 <p align="center">
-    <a href="License"><img src="https://img.shields.io/github/license/eljandoubi/triton-flash-attn"></a>
-    <a href="Linux"><img src="https://img.shields.io/github/actions/workflow/status/eljandoubi/triton-flash-attn/main.yml?label=Linux"></a>
-    <a href="Conda"><img src="https://img.shields.io/github/actions/workflow/status/eljandoubi/triton-flash-attn/main.yml?label=Conda"></a>
+    <b>
+        <font size="5">
+            Triton Flash Attention
+        </font>
+    </b>
 </p>
+
+![License](https://img.shields.io/github/license/eljandoubi/triton-flash-attn)
+
+
+| Python Version | Build Status |
+|---------------|-------------|
+| 3.8          | ![Python 3.8](https://github.com/eljandoubi/triton-flash-attn/actions/workflows/Build.yml/badge.svg?event=push&job=Build%20Python%203.8) |
+| 3.9          | ![Python 3.9](https://github.com/eljandoubi/triton-flash-attn/actions/workflows/Build.yml/badge.svg?event=push&job=Build%20Python%203.9) |
+| 3.10         | ![Python 3.10](https://github.com/eljandoubi/triton-flash-attn/actions/workflows/Build.yml/badge.svg?event=push&job=Build%20Python%203.10) |
+| 3.11         | ![Python 3.11](https://github.com/eljandoubi/triton-flash-attn/actions/workflows/Build.yml/badge.svg?event=push&job=Build%20Python%203.11) |
+| 3.12         | ![Python 3.12](https://github.com/eljandoubi/triton-flash-attn/actions/workflows/Build.yml/badge.svg?event=push&job=Build%20Python%203.12) |
+| 3.13         | ![Python 3.13](https://github.com/eljandoubi/triton-flash-attn/actions/workflows/Build.yml/badge.svg?event=push&job=Build%20Python%203.13) |
+
 
 Coding Flash Attention from scratch using triton and pytorch.
 

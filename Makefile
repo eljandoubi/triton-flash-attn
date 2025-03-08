@@ -13,5 +13,15 @@ build:
 	conda activate $(ENV_NAME) && \
 	pip install -r requirements.txt
 
+check:
+	. $(CONDA_BASE)/etc/profile.d/conda.sh  &&\
+	conda activate $(ENV_NAME) &&\
+	pytest
+
+lint:
+	. $(CONDA_BASE)/etc/profile.d/conda.sh  &&\
+	conda activate $(ENV_NAME) &&\
+	pylint */*.py
+
 clean:
 	conda remove --name $(ENV_NAME) --all -y

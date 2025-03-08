@@ -6,8 +6,8 @@
 
 <p align="center">
     <a href="License"><img src="https://img.shields.io/github/license/eljandoubi/triton-flash-attn"></a>
-    <a href="Linux"><img src="https://img.shields.io/github/actions/workflow/status/eljandoubi/triton-flash-attn/python-package-conda.yml?label=Linux"></a>
-    <a href="Conda"><img src="https://img.shields.io/github/actions/workflow/status/eljandoubi/triton-flash-attn/python-package-conda.yml?label=Conda"></a>
+    <a href="Linux"><img src="https://img.shields.io/github/actions/workflow/status/eljandoubi/triton-flash-attn/main.yml?label=Linux"></a>
+    <a href="Conda"><img src="https://img.shields.io/github/actions/workflow/status/eljandoubi/triton-flash-attn/main.yml?label=Conda"></a>
 </p>
 
 Coding Flash Attention from scratch using triton and pytorch.

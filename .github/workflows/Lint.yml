@@ -1,0 +1,25 @@
+name: Pylint
+
+on: [push]
+
+jobs:
+  build-linux-conda:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 5
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.12'
+    - name: Build
+      run: |
+        make build
+    - name: Pylint
+      run: |
+        make lint
+    - name: Clean
+      run: |
+        make clean

@@ -13,6 +13,8 @@
 </p>
 
 ![License](https://img.shields.io/github/license/eljandoubi/triton-flash-attn)
+![Pylint](https://github.com/eljandoubi/triton-flash-attn/actions/workflows/python-package-conda.yml/badge.svg?event=push&job=Lint)
+
 
 
 | Python Version | Build Status |

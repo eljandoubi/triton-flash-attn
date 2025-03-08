@@ -23,5 +23,12 @@ lint:
 	conda activate $(ENV_NAME) &&\
 	pylint */*.py
 
+autpep:
+	. $(CONDA_BASE)/etc/profile.d/conda.sh  &&\
+	conda activate $(ENV_NAME) &&\
+	autopep8 --in-place --recursive --aggressive --aggressive .
+	
+format: autpep lint
+
 clean:
 	conda remove --name $(ENV_NAME) --all -y

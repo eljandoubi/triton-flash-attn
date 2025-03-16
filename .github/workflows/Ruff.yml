@@ -17,7 +17,7 @@ jobs:
     - name: Build
       run: |
         make build
-    - name: Pylint
+    - name: Ruff
       run: |
         make check
     - name: Clean

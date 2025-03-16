@@ -14,11 +14,13 @@ def test_module(name: str):
 
 def test_torch_cuda():
     """check cuda availability under torch"""
-    from torch import cuda   # pylint: disable=C0415
+    from torch import cuda  # pylint: disable=C0415
+
     assert cuda.is_available()
 
 
 def test_triton_cuda():
     """check cuda availability under triton"""
-    import triton   # pylint: disable=C0415
+    import triton  # pylint: disable=C0415
+
     assert triton.runtime.driver.active.get_current_target().backend == "cuda"

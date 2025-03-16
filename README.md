@@ -13,7 +13,7 @@
 </p>
 
 ![License](https://img.shields.io/github/license/eljandoubi/triton-flash-attn)
-![Pylint](https://github.com/eljandoubi/triton-flash-attn/actions/workflows/Lint.yml/badge.svg)
+![Ruff](https://github.com/eljandoubi/triton-flash-attn/actions/workflows/Ruff.yml/badge.svg)
 
 
 

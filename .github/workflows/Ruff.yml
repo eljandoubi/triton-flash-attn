@@ -19,7 +19,7 @@ jobs:
         make build
     - name: Pylint
       run: |
-        make lint
+        make check
     - name: Clean
       run: |
         make clean

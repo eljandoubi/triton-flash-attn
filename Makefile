@@ -13,22 +13,25 @@ build:
 	conda activate $(ENV_NAME) && \
 	pip install -r requirements.txt
 
-check:
+test:
 	. $(CONDA_BASE)/etc/profile.d/conda.sh  &&\
 	conda activate $(ENV_NAME) &&\
 	pytest
 
-lint:
+format:
 	. $(CONDA_BASE)/etc/profile.d/conda.sh  &&\
 	conda activate $(ENV_NAME) &&\
-	pylint */*.py
-
-autpep:
-	. $(CONDA_BASE)/etc/profile.d/conda.sh  &&\
-	conda activate $(ENV_NAME) &&\
-	autopep8 --in-place --recursive --aggressive --aggressive .
+	ruff format
 	
-format: autpep lint
+check:
+	. $(CONDA_BASE)/etc/profile.d/conda.sh  &&\
+	conda activate $(ENV_NAME) &&\
+	ruff check
+
+fix:
+	. $(CONDA_BASE)/etc/profile.d/conda.sh  &&\
+	conda activate $(ENV_NAME) &&\
+	ruff check --fix
 
 clean:
 	conda remove --name $(ENV_NAME) --all -y

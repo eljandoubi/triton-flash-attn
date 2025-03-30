@@ -16,7 +16,7 @@ build:
 test:
 	. $(CONDA_BASE)/etc/profile.d/conda.sh  &&\
 	conda activate $(ENV_NAME) &&\
-	pytest
+	PYTHONPATH=src pytest tests/
 
 format:
 	. $(CONDA_BASE)/etc/profile.d/conda.sh  &&\

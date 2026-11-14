@@ -14,9 +14,13 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
+    - name: Set up conda
+      uses: conda-incubator/setup-miniconda@v3
     - name: Build
+      shell: bash -el {0}
       run: |
         make build
     - name: Clean
+      shell: bash -el {0}
       run: |
         make clean

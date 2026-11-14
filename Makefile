@@ -6,10 +6,11 @@ CONDA_BASE := $(shell conda info --base)
 
 # Env args
 ENV_NAME=triton-flash-env
+PYTHON_VERSION ?= 3.12
 
 build:
 	. $(CONDA_BASE)/etc/profile.d/conda.sh && \
-	conda create --name $(ENV_NAME) python=3.12 -y && \
+	conda create --name $(ENV_NAME) python=$(PYTHON_VERSION) -y && \
 	conda activate $(ENV_NAME) && \
 	pip install -r requirements.txt
 

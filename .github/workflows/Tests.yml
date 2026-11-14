@@ -1,0 +1,34 @@
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+  reference:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - name: Install
+      run: |
+        pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+        pip install numpy pytest
+    - name: Block algorithm in plain PyTorch
+      run: PYTHONPATH=src pytest tests/test_reference.py -q
+
+  interpreter:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - name: Install
+      run: |
+        pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+        # numpy stays at the version of requirements.txt: with numpy 2.5.4 the interpreter of
+        # triton 3.2.0 fails on int() of a one-element array
+        pip install triton==3.2.0 numpy==2.2.3 pytest
+    - name: Kernels in the Triton interpreter
+      run: TRITON_INTERPRET=1 PYTHONPATH=src pytest tests/test_attention.py -q

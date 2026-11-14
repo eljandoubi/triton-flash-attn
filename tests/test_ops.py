@@ -1,6 +1,9 @@
 import torch
 import pytest
-from ops.add import Add
+
+pytest.importorskip("triton")
+
+from ops.add import Add  # noqa: E402
 
 
 @pytest.mark.skipif(not torch.cuda.is_available(), reason="Cuda is not available")
